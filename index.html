@@ -73,6 +73,9 @@
                     });
                 }
 
+                if($('#theatre-uri').val().trim().length == 0)
+                    $('#theatre-uri').val('http://216.104.204.91/surveys/api/act/create/'); //set a default, as our non-tech users of acode might not know what to do here
+
                 if(fb == null)
                     return;
 
