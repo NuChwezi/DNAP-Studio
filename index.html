@@ -1,13 +1,13 @@
 <!doctype html>
 <html>
     <head>
-        <title>The Studio</title>
+        <title>The Survey Designer</title>
         <meta name="description" content="">
         <link rel="stylesheet" href="vendor/css/vendor.css" />
         <link rel="stylesheet" href="dist/formbuilder.css" />
     </head>
     <body>
-        <header><span class="logo"></span> <h1>The Studio | <small>cook & serve new, native, cross-platform apps, faster than it takes to make coffee!</small></h1></header>
+        <header><span class="logo"></span> <h1>The Survey Designer | <small>cook & serve new, surveys faster than it takes to make coffee!</small></h1></header>
         <article>
             <div class='fb-main'></div>
         </article>
@@ -15,18 +15,9 @@
             <table>
                 <tr>
                     <td>
-                        <p>  Read about 
-                        <a target="_blank" href="https://nuscribes.com/scribes_app/book/40/read/#Studio">The Studio</a>,
-                        <a target="_blank" href="https://nuscribes.com/scribes_app/book/40/read/#Historion">The Historion</a> and 
-                        <a target="_blank" href="https://nuscribes.com/scribes_app/book/40/read/#Theatre">The Theatre</a>,
-                        that are all part of the amazing, disruptive, emerging-future tech called
-                        <a target="_blank" href="https://nuscribes.com/scribes_app/book/40/read/?#chapter-500">Project Okot (Project-O)</a> - yet another service to humanity, by the <a target="_blank" href="https://nuchwezi.com">NuChwezi</a>
+                        <p>  Technology based on
+                        <a target="_blank" href="https://nuscribes.com/scribes_app/book/40/read/#Studio">The Studio</a>
                         </p>
-                    </td>
-                    <td>
-                        <a target="_blank" href="https://nuchwezi.com">
-                            <span class="logo-nuchwezi"></span>
-                        </a>
                     </td>
                 </tr>
             </table>
@@ -91,7 +82,7 @@
 
                       $('#code').html('<span class="publish-status">Wait as this persona is published...</span>');
                         $.ajax({
-                          url: 'https://theatre.nuchwezi.com/api/persona/create/',
+                          url: 'http://216.104.204.91/surveys/api/persona/create/',
                           type: 'POST',
                           data: payload,
                           contentType: "application/json",
