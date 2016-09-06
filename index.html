@@ -17,6 +17,7 @@
                     <td>
                         <p>  Technology based on
                         <a target="_blank" href="https://nuscribes.com/scribes_app/book/40/read/#Studio">The Studio</a>
+                        | By the <a href="https://nuchwezi.com" target="_blank">NuChwezi</a>
                         </p>
                     </td>
                 </tr>
@@ -80,19 +81,18 @@
 
                     if(window.publish_persona){
 
-                      $('#code').html('<span class="publish-status">Wait as this persona is published...</span>');
+                      $('#code').html('<span class="publish-status">Wait as this survey is published...</span>');
                         $.ajax({
                           url: 'http://216.104.204.91/surveys/api/persona/create/',
                           type: 'POST',
                           data: payload,
                           contentType: "application/json",
                           success: function(data){
-                                window.app_uuid = window.uuid;
                                 console.log(data)
                                 make_qrcode('#code',data, defaultQRCODE_EXPORT_SIZE);
                           },
                           error: function(){
-                              $('#code').html('<span class="publish-failed">Publishing of this persona failed. Ensure that this studio has access to persona publishing facility, such as a theatre. Contact tech[at]nuchwezi[dot]com, for access to a reliable, first-class theatre implementation, or get access to the entire suite of technologies in Project-Okot.</span>');
+                              $('#code').html('<span class="publish-failed">Publishing of this survey failed. Ensure that this studio has access to survey publishing facility, such as a theatre. Contact tech[at]nuchwezi[dot]com, for access to a reliable, first-class theatre implementation, or get access to the entire suite of technologies in Project-Okot.</span>');
                           }
                         });
 
@@ -102,7 +102,7 @@
                     if(window.download_persona){
                         var appName = JSON.parse(payload).app.name.replace(/\s+/g,"_") || "Persona";
                         var persona_file_name = appName + "-" + (new Date()).toISOString() + ".persona";
-                        $('#code').html('<span class="publish-status">Please save the generated Persona file: ' + persona_file_name + '</span>');
+                        $('#code').html('<span class="publish-status">Please save the generated survey file: ' + persona_file_name + '</span>');
                         saveAs(new Blob([payload], { type: "application/json+persona" }), persona_file_name)
                         window.download_persona = false;
                     }
@@ -116,9 +116,9 @@
                          console.log(this.result);            
                          try{
                              init_fb(JSON.parse(this.result));
-                              $('#code').html('<span class="publish-status">A new persona has been imported. You can now proceed with modifying it...</span>');
+                              $('#code').html('<span class="publish-status">A new survey has been imported. You can now proceed with modifying it...</span>');
                         }catch(e){
-                            $('#code').html('<span class="publish-failed">Parsing or loading the import persona failed! Check the input against the standard specifications, and try again.</span>');
+                            $('#code').html('<span class="publish-failed">Parsing or loading the import survey failed! Check the input against the standard specifications, and try again.</span>');
                         }
                        }
                        reader.readAsText(file)
@@ -129,9 +129,9 @@
                     var personaJSON = $('#import-persona-input').val();
                     try{
                         init_fb(JSON.parse(personaJSON));
-                        $('#code').html('<span class="publish-status">A new persona has been imported. You can now proceed with modifying it...</span>');
+                        $('#code').html('<span class="publish-status">A new survey has been imported. You can now proceed with modifying it...</span>');
                     }catch(e){
-                        $('#code').html('<span class="publish-failed">Parsing or loading the import persona failed! Check the input against the standard specifications, and try again.</span>');
+                        $('#code').html('<span class="publish-failed">Parsing or loading the import survey failed! Check the input against the standard specifications, and try again.</span>');
                     }
                 });
 
@@ -144,13 +144,13 @@
                             console.log(data)
                             try{
                                 init_fb(JSON.parse(data));
-                                $('#code').html('<span class="publish-status">A new persona has been imported. You can now proceed with modifying it...</span>');
+                                $('#code').html('<span class="publish-status">A new survey has been imported. You can now proceed with modifying it...</span>');
                             }catch(e){
-                                $('#code').html('<span class="publish-failed">Parsing or loading the import persona failed! Check the input against the standard specifications, and try again.</span>');
+                                $('#code').html('<span class="publish-failed">Parsing or loading the import survey failed! Check the input against the standard specifications, and try again.</span>');
                             }
                       },
                       error: function(){
-                            $('#code').html('<span class="publish-failed">Parsing or loading the import persona failed! Check the input against the standard specifications, and try again.</span>');
+                            $('#code').html('<span class="publish-failed">Parsing or loading the import survey failed! Check the input against the standard specifications, and try again.</span>');
                       }
                     });
                 });
@@ -168,7 +168,7 @@
                     d = Math.floor(d/16);
                     return (c=='x' ? r : (r&0x3|0x8)).toString(16);
                 });
-                window.uuid = uuid;
+                window.app_uuid = uuid;
                 return uuid;
             }
 
