@@ -352,6 +352,7 @@ class BuilderView extends Backbone.View
             app:
                 name: $('#app-name').val()
                 color: $('#app-color').val()
+                channel: $('#publish-channel').val()
                 theatre_address: $('#theatre-uri').val()
                 transport_mode: $('#transport-mode').val()
                 description: $('#app-description').val()
@@ -403,6 +404,7 @@ class Formbuilder
     APP_TRANSPORT_MODE_CLASS: 'fb-transport-mode'
     APP_TRANSPORT_MODES: ['POST','GET','SMS','EMAIL']
     APP_PUBLISH_BUTTON_CLASS: 'fb-app-publish'
+    PUBLISH_CHANNEL_CLASS: 'fb-publish-channel'
     HTTP_ENDPOINT: ''
     HTTP_METHOD: 'POST'
     AUTOSAVE: true
@@ -438,6 +440,7 @@ class Formbuilder
       SET_APP_IMAGE: 'Survey Brand Image URI...'
       SET_APP_DESCRIPTION: 'Briefly describe the survey and its purpose, to the users...'
       SET_APP_COLOR: '#Main Survey Color'
+      SET_PUBLISH_CHANNEL: 'CHANNEL to publish to'
       PUBLISH_PERSONA: 'Publish The Survey'
       IMPORT_PERSONA_JSON: 'Import from JSON'
       IMPORT_PERSONA_URI: 'Import from URI'

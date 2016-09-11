@@ -1,6 +1,6 @@
 <div class='fb-publish-wrapper'>
 <input type="text" id='app-name' class='<%= Formbuilder.options.APP_NAME_CLASS %>' placeholder='<%= Formbuilder.options.dict.SET_APP_NAME %>'></input>
-<input type="text" id='app-color' class='<%= Formbuilder.options.APP_COLOR_CLASS %>' placeholder='<%= Formbuilder.options.dict.SET_APP_COLOR %>'></input>
+<input type="text" id='app-color' value='#490A3D' class='jscolor <%= Formbuilder.options.APP_COLOR_CLASS %>' placeholder='<%= Formbuilder.options.dict.SET_APP_COLOR %>'></input>
 <input type="text" id='app-brand-image' class='<%= Formbuilder.options.APP_IMAGE_CLASS %>' placeholder='<%= Formbuilder.options.dict.SET_APP_IMAGE %>'></input>
 <input type="text" id='theatre-uri' class='<%= Formbuilder.options.APP_THEATRE_URI_CLASS %>' placeholder='<%= Formbuilder.options.dict.SET_THEATRE_URI %>'></input>
 <select id='transport-mode' class='<%= Formbuilder.options.APP_TRANSPORT_MODE_CLASS %>' title='<%= Formbuilder.options.dict.SET_TRANSPORT_MODE %>' >
@@ -11,6 +11,7 @@
 <hr/>
 <textarea id='app-description' class='<%= Formbuilder.options.APP_DESCRIPTION_CLASS %>' placeholder='<%= Formbuilder.options.dict.SET_APP_DESCRIPTION %>'></textarea>
 <hr/>
+<input type="text" id='publish-channel' class='<%= Formbuilder.options.PUBLISH_CHANNEL_CLASS %>' placeholder='<%= Formbuilder.options.dict.SET_PUBLISH_CHANNEL %>'></input>
 <button id='js-publish-persona' class='<%= Formbuilder.options.BUTTON_CLASS %> <%= Formbuilder.options.APP_PUBLISH_BUTTON_CLASS %>'><%= Formbuilder.options.dict.PUBLISH_PERSONA %></button>
 <button id='js-download-persona' class='<%= Formbuilder.options.BUTTON_CLASS %> <%= Formbuilder.options.APP_PUBLISH_BUTTON_CLASS %>'><%= Formbuilder.options.dict.DOWNLOAD_PERSONA %></button>
 <div id="code" class="code"></div>
