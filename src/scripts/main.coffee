@@ -164,7 +164,7 @@ class BuilderView extends Backbone.View
     @saveFormButton = @$el.find(".js-save-form")
     @saveFormButton.attr('disabled', true).text(Formbuilder.options.dict.ALL_CHANGES_SAVED)
 
-    $('#app-name, #app-color, #theatre-uri, #transport-mode, #app-description, #app-brand-image').change =>
+    $('#app-name, #app-color, #publish-channel, #theatre-uri, #transport-mode, #app-description, #app-brand-image').change =>
         @formSaved = false
         @saveForm.call(@)
 

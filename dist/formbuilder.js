@@ -293,7 +293,7 @@
       this.formSaved = true;
       this.saveFormButton = this.$el.find(".js-save-form");
       this.saveFormButton.attr('disabled', true).text(Formbuilder.options.dict.ALL_CHANGES_SAVED);
-      $('#app-name, #app-color, #theatre-uri, #transport-mode, #app-description, #app-brand-image').change(function() {
+      $('#app-name, #app-color, #publish-channel, #theatre-uri, #transport-mode, #app-description, #app-brand-image').change(function() {
         _this.formSaved = false;
         return _this.saveForm.call(_this);
       });
