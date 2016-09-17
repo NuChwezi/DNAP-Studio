@@ -1236,7 +1236,7 @@ __p += '\n</select>\n<hr/>\n<textarea id=\'app-description\' class=\'' +
 ((__t = ( Formbuilder.options.APP_DESCRIPTION_CLASS )) == null ? '' : __t) +
 '\' placeholder=\'' +
 ((__t = ( Formbuilder.options.dict.SET_APP_DESCRIPTION )) == null ? '' : __t) +
-'\'></textarea>\n<hr/>\n<input type="text" id=\'publish-channel\' class=\'' +
+'\'></textarea>\n<hr/>\n<input type="text" id=\'publish-channel\' value="ACODE" class=\'' +
 ((__t = ( Formbuilder.options.PUBLISH_CHANNEL_CLASS )) == null ? '' : __t) +
 '\' placeholder=\'' +
 ((__t = ( Formbuilder.options.dict.SET_PUBLISH_CHANNEL )) == null ? '' : __t) +
