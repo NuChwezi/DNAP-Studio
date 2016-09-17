@@ -402,7 +402,7 @@ class Formbuilder
     APP_COLOR_CLASS: 'fb-app-color'
     APP_THEATRE_URI_CLASS: 'fb-theatre-uri'
     APP_TRANSPORT_MODE_CLASS: 'fb-transport-mode'
-    APP_TRANSPORT_MODES: ['POST','GET','SMS','EMAIL']
+    APP_TRANSPORT_MODES: ['POST']
     APP_PUBLISH_BUTTON_CLASS: 'fb-app-publish'
     PUBLISH_CHANNEL_CLASS: 'fb-publish-channel'
     HTTP_ENDPOINT: ''

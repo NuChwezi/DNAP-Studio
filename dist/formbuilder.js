@@ -598,7 +598,7 @@
       APP_COLOR_CLASS: 'fb-app-color',
       APP_THEATRE_URI_CLASS: 'fb-theatre-uri',
       APP_TRANSPORT_MODE_CLASS: 'fb-transport-mode',
-      APP_TRANSPORT_MODES: ['POST', 'GET', 'SMS', 'EMAIL'],
+      APP_TRANSPORT_MODES: ['POST'],
       APP_PUBLISH_BUTTON_CLASS: 'fb-app-publish',
       PUBLISH_CHANNEL_CLASS: 'fb-publish-channel',
       HTTP_ENDPOINT: '',
@@ -1216,7 +1216,7 @@ __p += '<div class=\'fb-publish-wrapper\'>\n<input type="text" id=\'app-name\' c
 ((__t = ( Formbuilder.options.APP_IMAGE_CLASS )) == null ? '' : __t) +
 '\' placeholder=\'' +
 ((__t = ( Formbuilder.options.dict.SET_APP_IMAGE )) == null ? '' : __t) +
-'\'></input>\n<input type="text" id=\'theatre-uri\' class=\'' +
+'\'></input>\n<input type="hidden" id=\'theatre-uri\' class=\'' +
 ((__t = ( Formbuilder.options.APP_THEATRE_URI_CLASS )) == null ? '' : __t) +
 '\' placeholder=\'' +
 ((__t = ( Formbuilder.options.dict.SET_THEATRE_URI )) == null ? '' : __t) +
