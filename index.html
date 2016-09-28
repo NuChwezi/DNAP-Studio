@@ -92,8 +92,13 @@
                           data: payload,
                           contentType: "application/json",
                           success: function(data){
+                                data = JSON.parse(data);
                                 console.log(data)
-                                make_qrcode('#code',data, defaultQRCODE_EXPORT_SIZE);
+                                make_qrcode('#code',data.api, defaultQRCODE_EXPORT_SIZE);
+                                $('#code').prepend(
+                                            $('<a/>', {'target': '_blank', 'href': data.app, 'class': 'fb-button', 'style': 'margin:10px'}).text('START USING THIS SURVEY!'),
+                                            $('<a/>', {'target': '_blank', 'href': data.analytics, 'class': 'fb-button', 'style': 'margin:10px'}).text('ANALYTICS FOR THIS SURVEY!')
+                                    );
                           },
                           error: function(){
                               $('#code').html('<span class="publish-failed">Publishing of this survey failed. Ensure that this studio has access to survey publishing facility, such as a theatre. Contact tech[at]nuchwezi[dot]com, for access to a reliable, first-class theatre implementation, or get access to the entire suite of technologies in Project-Okot.</span>');
