@@ -71,15 +71,16 @@ header h1{display:inline-block;position:absolute}
 .response-field-checkboxes .fb-option,.response-field-radio .fb-option{margin-bottom:5px;display:inline-block}
 .response-field-website input{width:200px}
 *{box-sizing:border-box}
-body{background-color:#556270;font-family:sans-serif}
+body{background:-webkit-radial-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5) 14%,transparent 15%) 0 0,-webkit-radial-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5) 14%,transparent 15%) 7px 7px,-webkit-radial-gradient(rgba(255,255,255,0.1) 14%,transparent 16%) 0 1px,-webkit-radial-gradient(rgba(255,255,255,0.1) 14%,transparent 16%) 7px 8px;background:-moz-radial-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5) 14%,transparent 15%) 0 0,-moz-radial-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5) 14%,transparent 15%) 7px 7px,-moz-radial-gradient(rgba(255,255,255,0.1) 14%,transparent 16%) 0 1px,-moz-radial-gradient(rgba(255,255,255,0.1) 14%,transparent 16%) 7px 8px;background:-o-radial-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5) 14%,transparent 15%) 0 0,-o-radial-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5) 14%,transparent 15%) 7px 7px,-o-radial-gradient(rgba(255,255,255,0.1) 14%,transparent 16%) 0 1px,-o-radial-gradient(rgba(255,255,255,0.1) 14%,transparent 16%) 7px 8px;background:radial-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5) 14%,transparent 15%) 0 0,radial-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5) 14%,transparent 15%) 7px 7px,radial-gradient(rgba(255,255,255,0.1) 14%,transparent 16%) 0 1px,radial-gradient(rgba(255,255,255,0.1) 14%,transparent 16%) 7px 8px;background-color:#bd1550;background-size:16px 16px;font-family:sans-serif}
 .fb-main{background-color:#fff;-webkit-border-radius:5px;-moz-border-radius:5px;border-radius:5px;min-height:600px}
 input[type=text]{margin-bottom:3px}
 select{margin-bottom:5px;font-size:40px}
 .section-image{height:200px;width:auto}
 .section-image.image-control{height:100px;width:auto}
-footer{max-width:1000px;margin:0 auto;padding:0 20px 0 0;position:relative;font-family:'Source Sans Pro','Open Sans',Tahoma;background-color:#c2cbce;-webkit-border-radius:6px;-moz-border-radius:6px;border-radius:6px;padding:10px;margin-top:10px}
+footer{max-width:1000px;margin:0 auto;padding:0 20px 0 0;position:relative;font-family:'Source Sans Pro','Open Sans',Tahoma;background-color:#000;color:#767770;-webkit-border-radius:6px;-moz-border-radius:6px;border-radius:6px;padding:10px;margin-top:10px}
+footer a,a:visited{color:rgba(255,255,0,0.68);text-decoration:none}
 .logo-nuchwezi{background-image:url("../img/logo-nuchwezi.png");height:60px;width:86.11764705882354px;display:inline-block;background-size:86.11764705882354px 60px}
-.fb-publish-wrapper{padding:10px;background-color:#8a9b0f;-webkit-border-radius:6px;-moz-border-radius:6px;border-radius:6px;-webkit-box-shadow:0 0 9px 1px rgba(0,0,0,0.75);-moz-box-shadow:0 0 9px 1px rgba(0,0,0,0.75);box-shadow:0 0 9px 1px rgba(0,0,0,0.75);margin:10px;margin-top:20px}
+.fb-publish-wrapper{padding:10px;background-color:#0f9b8c;-webkit-border-radius:6px;-moz-border-radius:6px;border-radius:6px;-webkit-box-shadow:0 0 9px 1px rgba(0,0,0,0.75);-moz-box-shadow:0 0 9px 1px rgba(0,0,0,0.75);box-shadow:0 0 9px 1px rgba(0,0,0,0.75);margin:10px;margin-top:20px}
 .code{background-color:#fff;padding:45px;-webkit-border-radius:6px;-moz-border-radius:6px;border-radius:6px;margin-top:10px;font-weight:bold}
 .fb-transport-mode{font-size:16px}
 .fb-app-publish{padding:3px;background:none repeat scroll 0% 0% #bd1550}
