@@ -4,6 +4,7 @@
         <title>The Survey Designer</title>
         <meta name="description" content="">
         <link rel="stylesheet" href="vendor/css/vendor.css" />
+        <link rel="stylesheet" href="vendor/css/spectrum.css" />
         <link rel="stylesheet" href="dist/formbuilder.css" />
     </head>
     <body>
@@ -28,10 +29,24 @@
         <script src="vendor/js/jquery.qrcode.js"></script>
         <script src="vendor/js/FileSaver.js"></script>
         <script src="vendor/js/Blob.js"></script>
-        <script src="vendor/js/jscolor.min.js"></script>
+        <script src="vendor/js/spectrum.js"></script>
         <script src="dist/formbuilder.js"></script>
 
         <script>
+
+            function getUrlVars()
+            {
+                var vars = [], hash;
+                var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+                for(var i = 0; i < hashes.length; i++)
+                {
+                    hash = hashes[i].split('=');
+                    vars.push(hash[0]);
+                    vars[hash[0]] = hash[1];
+                }
+                return vars;
+            }
+
             var defaultQRCODE_SIZE = 200;
             var defaultQRCODE_EXPORT_SIZE = 500;
             var defaultEXPORT_SIZE_H = 400;
@@ -57,7 +72,8 @@
                         bootstrapData: persona.fields
                     });
                     $('#app-name').val(persona.app.name);
-                    $('#app-color').val(persona.app.color);
+                    $('#app-color').spectrum();
+                    $('#app-color').spectrum('set',persona.app.color);
                     $('#publish-channel').val(persona.app.channel);
                     $('#app-brand-image').val(persona.app.brand_image);
                     $('#theatre-uri').val(persona.app.theatre_address);
@@ -72,6 +88,7 @@
                     fb = new Formbuilder({
                         selector: '.fb-main',
                     });
+                    $('#app-color').spectrum();
                 }
 
                 if($('#theatre-uri').val().trim().length == 0)
@@ -183,7 +200,38 @@
 
             $(function(){
 
-                init_fb();
+
+  // first, we check if the studio needs to be bootstrapped some way...
+                var query = getUrlVars();
+                if(query.purl != undefined){
+
+                    //first, initialize normally...
+                    init_fb();
+                    $('#code').html('<span class="publish-status">The survey specified in the URL is being loaded. Please wait...</span>');
+                    // then go on and fetch the persona to bootstrap with...
+                    $.ajax({
+                      url: query.purl,
+                        async: true,
+                        crossDomain: true,
+                      type: 'GET',
+                      success: function(data){
+                            console.log(data)
+                            try{
+                                init_fb((typeof data === 'string' || data instanceof String) ? JSON.parse(data): data);
+                                $('#code').html('<span class="publish-status">The designer has been bootstrapped with the specified survey. You can now proceed with modifying it as you wish...</span>');
+                            }catch(e){
+                                $('#code').html('<span class="publish-failed">Parsing or loading the survey specified in the URL failed! Check the resource linked to, against the standard survey specifications, and whether it can be accessed by this Survey Designer, and then try again.</span>');
+                            }
+                      },
+                      error: function(){
+                            $('#code').html('<span class="publish-failed">Parsing or loading the survey specified in the URL failed! Check the resource linked to, against the standard survey specifications, and whether it can be accessed by this Survey Designer, and then try again.</span>');
+                      }
+                    });
+
+                }
+                else {
+                    init_fb();
+                }
 
             });
 

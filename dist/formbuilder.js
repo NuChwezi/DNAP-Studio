@@ -1208,7 +1208,7 @@ __p += '<div class=\'fb-publish-wrapper\'>\n<input type="text" id=\'app-name\' c
 ((__t = ( Formbuilder.options.APP_NAME_CLASS )) == null ? '' : __t) +
 '\' placeholder=\'' +
 ((__t = ( Formbuilder.options.dict.SET_APP_NAME )) == null ? '' : __t) +
-'\'></input>\n<input type="text" id=\'app-color\' value=\'#490A3D\' class=\'jscolor ' +
+'\'></input>\n<input type="color" id=\'app-color\' value=\'#490A3D\' class=\'' +
 ((__t = ( Formbuilder.options.APP_COLOR_CLASS )) == null ? '' : __t) +
 '\' placeholder=\'' +
 ((__t = ( Formbuilder.options.dict.SET_APP_COLOR )) == null ? '' : __t) +
